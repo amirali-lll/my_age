@@ -1,0 +1,14 @@
+{
+  "name": "simple-age-site",
+  "version": "1.0.0",
+  "description": "A simple site to display age in years, including seconds.",
+  "main": "src/script.js",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

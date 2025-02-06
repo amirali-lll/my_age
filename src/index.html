@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Time</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <p id="age-title">AGE</p>
+        <div class="header-container">
+            <h1 id="age-year"></h1><h3 id="years-floating"></h3>
+        </div>
+    </div>
+    <script>
+        const ageYear = document.getElementById('age-year');
+        const yearsFloating = document.getElementById('years-floating');
+        const birthDate = new Date('2003-08-19');
+
+        function updateAge() {
+            const currentDate = new Date();
+            const age = (currentDate - birthDate) / (1000 * 60 * 60 * 24 * 365.25);
+            ageYear.innerHTML = Math.floor(age);
+            yearsFloating.innerHTML = (age - Math.floor(age)).toFixed(9).substring(1);
+        }
+
+        setInterval(updateAge, 80);
+        updateAge();
+    </script>
+</body>
+</html>
